@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateBootstrap.Core", "NHibernateBootstrap.Core\NHibernateBootstrap.Core.csproj", "{C5788120-7403-41BA-BB4E-DCB4BEAE497E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernateBootstrap.Tests", "NHibernateBootstrap.Tests\NHibernateBootstrap.Tests.csproj", "{CC70C0BF-D703-48BD-ABC3-5054F3AC4892}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5788120-7403-41BA-BB4E-DCB4BEAE497E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5788120-7403-41BA-BB4E-DCB4BEAE497E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5788120-7403-41BA-BB4E-DCB4BEAE497E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5788120-7403-41BA-BB4E-DCB4BEAE497E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC70C0BF-D703-48BD-ABC3-5054F3AC4892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC70C0BF-D703-48BD-ABC3-5054F3AC4892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC70C0BF-D703-48BD-ABC3-5054F3AC4892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC70C0BF-D703-48BD-ABC3-5054F3AC4892}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

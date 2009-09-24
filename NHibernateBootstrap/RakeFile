@@ -10,7 +10,7 @@ require 'zip/zipfilesystem'
 
 RESULTS_DIR = "results"
 BUILD_NUMBER = "0.1.0."
-PRODUCT = "_StarterProject_StructureMap"
+PRODUCT = "NHibernateBootstrap"
 COPYRIGHT = 'Copyright 2009 McCreary, Veselka, Bragg & Allen, P.C. All rights reserved. http://code.google.com/p/mvbalaw-commons/';
 COMMON_ASSEMBLY_INFO = 'src/CommonAssemblyInfo.cs';
 CLR_VERSION = "v3.5"
@@ -57,9 +57,9 @@ end
 
 desc "Compiles the app"
 task :compile => [:clean, :version] do
-  MSBuildRunner.compile :compilemode => COMPILE_TARGET, :solutionfile => 'src/StarterProject_StructureMap.sln', :clrversion => CLR_VERSION
+  MSBuildRunner.compile :compilemode => COMPILE_TARGET, :solutionfile => 'src/NHibernateBootstrap.sln', :clrversion => CLR_VERSION
     
-  outDir = "src/StarterProject_StructureMap.Core/bin/#{COMPILE_TARGET}"
+  outDir = "src/NHibernateBootstrap.Core/bin/#{COMPILE_TARGET}"
     
   Dir.glob(File.join(outDir, "*.{dll,pdb}")){|file| 		
 	copy(file, props[:archive]) if File.file?(file)
@@ -72,7 +72,7 @@ task :test => [:unit_test]
 desc "Runs unit tests"
 task :unit_test => :compile do
   runner = NUnitRunner.new :compilemode => COMPILE_TARGET, :source => 'src', :platform => 'x86'
-  runner.executeTests ['StarterProject_StructureMap.Tests']  
+  runner.executeTests ['NHibernateBootstrap.Tests']  
 end
 
 desc "Target used for the CI server"

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StarterProject_StructureMap.Core")]
+[assembly: AssemblyTitle("NHibernateSQLite.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("StarterProject_StructureMap.Core")]
+[assembly: AssemblyProduct("NHibernateSQLite.Core")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2009")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("b53f8760-e9d9-4956-9332-e77fa74673a4")]
+[assembly: Guid("168b46a4-7a21-4308-b45f-0190d1b73df0")]
 
 // Version information for an assembly consists of the following four values:
 //
