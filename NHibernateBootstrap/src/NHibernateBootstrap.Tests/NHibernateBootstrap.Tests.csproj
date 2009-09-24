@@ -32,8 +32,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BlogTestFixture.cs" />
+    <Compile Include="GenerateSchemaFixture.cs" />
     <Compile Include="InMemoryDatabaseTest.cs" />
+    <Compile Include="ProductCrudFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionManagementFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NHibernateBootstrap.Core\NHibernateBootstrap.Core.csproj">
@@ -74,16 +77,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\lib\NUnit\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="StructureMap, Version=2.5.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\StructureMap\StructureMap.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\lib\SQLite binding for .NET\bin\System.Data.SQLite.DLL</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="sqlite3.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

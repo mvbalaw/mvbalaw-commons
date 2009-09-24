@@ -7,10 +7,6 @@ namespace NHibernateBootstrap.Tests
     [TestFixture]
     public class BlogTestFixture : InMemoryDatabaseTest
     {
-        public BlogTestFixture()
-            : base(typeof(Blog).Assembly)
-        {
-        }
 
         [Test]
         public void CanSaveAndLoadBlog()
@@ -45,5 +41,7 @@ namespace NHibernateBootstrap.Tests
                 tx.Commit();
             }
         }
+
+
     }
 }
