@@ -9,7 +9,7 @@ require 'zip/zip'
 require 'zip/zipfilesystem'
 
 RESULTS_DIR = "results"
-BUILD_NUMBER = "0.1.0."
+BUILD_NUMBER = "0.1.1."
 PRODUCT = "_StarterProject_StructureMap"
 COPYRIGHT = 'Copyright 2009 McCreary, Veselka, Bragg & Allen, P.C. All rights reserved. http://code.google.com/p/mvbalaw-commons/';
 COMMON_ASSEMBLY_INFO = 'src/CommonAssemblyInfo.cs';
