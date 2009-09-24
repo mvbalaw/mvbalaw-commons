@@ -1,0 +1,7 @@
+SQLite binding for .NET version 1.0.65.0
+http://sqlite.phxsoftware.com/
+Downloaded from the SQLite SourceForge site on 5/13/2009
+http://sourceforge.net/projects/sqlite-dotnet2/files/SQLite%20for%20ADO.NET%202.0/
+
+You might find this blog entry useful for using SQLite with .NET:
+http://devlicio.us/blogs/krzysztof_kozmic/archive/2009/08/14/testing-with-nhibernate-and-sqlite.aspx
