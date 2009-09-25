@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web;
+﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using NHibernateBootstrap.Core;
@@ -20,6 +19,9 @@ namespace NHibernateBootstrap.Web
         {            
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+			routes.IgnoreRoute("favicon.ico");
+
+
             routes.MapRoute(
                 "Default",                                              // Route name
                 "{controller}/{action}/{id}",                           // URL with parameters
@@ -30,6 +32,7 @@ namespace NHibernateBootstrap.Web
 
         protected void Application_Start()
         {
+        	ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerFactory());
             RegisterRoutes(RouteTable.Routes);
             Bootstrapper.Bootstrap();
         }
