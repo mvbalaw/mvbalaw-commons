@@ -23,7 +23,7 @@ desc "Compiles, unit tests, generates the database"
 task :all => [:default]
 
 desc "**Default**, compiles and runs tests"
-task :default => [:compile, :unit_test]
+task :default => [:compile, :test]
 
 desc "Displays a list of tasks"
 task :help do
@@ -66,13 +66,20 @@ task :compile => [:clean, :version] do
   }
 end
 
-desc "Runs unit tests"
-task :test => [:unit_test]
+desc "Runs unit and integration tests"
+task :test => [:unit_test, :integration_test]
 
 desc "Runs unit tests"
 task :unit_test => :compile do
   runner = NUnitRunner.new :compilemode => COMPILE_TARGET, :source => 'src', :platform => 'x86'
-  runner.executeTests ['NHibernateBootstrap.Tests']  
+  runner.executeTests ['NHibernateBootstrap.Tests']
+end
+
+
+desc "Runs integration tests"
+task :integration_test => :compile do
+  runner = NUnitRunner.new :compilemode => COMPILE_TARGET, :source => 'src', :platform => 'x86'
+  runner.executeTests ['NHibernateBootstrap.Tests.Environment'] 
 end
 
 desc "Target used for the CI server"
