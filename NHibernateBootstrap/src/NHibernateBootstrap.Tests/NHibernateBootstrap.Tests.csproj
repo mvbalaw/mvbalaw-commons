@@ -34,6 +34,7 @@
     <Compile Include="BlogTestFixture.cs" />
     <Compile Include="GenerateSchemaFixture.cs" />
     <Compile Include="InMemoryDatabaseTest.cs" />
+    <Compile Include="PopulateDatabaseFixture.cs" />
     <Compile Include="ProductCrudFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionManagementFixture.cs" />
