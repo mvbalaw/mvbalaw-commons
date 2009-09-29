@@ -28,7 +28,7 @@
         <tr>
             <td>
                 <%= Html.ActionLink("Edit", "Edit", new { id = product.Id })%>
-                <%= Html.ActionLink("Details", "Details", new { id = product.Id })%>
+                <%= Html.ActionLink("Delete", "Delete", new { id = product.Id })%>
             </td>
             <td>
                 <%= Html.Encode(product.Name)%>
@@ -43,7 +43,7 @@
         <% } %>
     </table>
     <p> 
-    <%= Html.ActionLink("Create New", "Create") %>
+    <%= Html.ActionLink("Create New", "New") %>
     </p>
     
     
