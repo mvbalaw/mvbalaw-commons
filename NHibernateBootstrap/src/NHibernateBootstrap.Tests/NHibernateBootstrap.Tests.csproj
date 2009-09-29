@@ -32,6 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BlogTestFixture.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="GenerateSchemaFixture.cs" />
     <Compile Include="InMemoryDatabaseTest.cs" />
     <Compile Include="PopulateDatabaseFixture.cs" />

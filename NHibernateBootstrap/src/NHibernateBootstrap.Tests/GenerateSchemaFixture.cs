@@ -1,6 +1,5 @@
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
-using NHibernateBootstrap.Core;
 using NUnit.Framework;
 using StructureMap;
 

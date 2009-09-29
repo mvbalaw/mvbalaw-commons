@@ -2,7 +2,6 @@ using NHibernate.Cfg;
 using NHibernate.Criterion;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
-using NHibernateBootstrap.Core;
 using NHibernateBootstrap.Core.Domain;
 using NHibernateBootstrap.Core.Persistence;
 using NUnit.Framework;

@@ -31,9 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Domain\Blog.cs" />
     <Compile Include="Domain\Product.cs" />
+    <Compile Include="Persistence\DatabaseBuilder.cs" />
+    <Compile Include="Persistence\IDatabaseBuilder.cs" />
     <Compile Include="Persistence\IUnitOfWork.cs" />
     <Compile Include="Persistence\NHibernateRegistry.cs" />
     <Compile Include="Persistence\UnitOfWork.cs" />

@@ -1,5 +1,4 @@
 using NHibernate;
-using NHibernateBootstrap.Core;
 using NUnit.Framework;
 using StructureMap;
 

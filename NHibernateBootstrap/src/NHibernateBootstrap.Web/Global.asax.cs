@@ -1,7 +1,8 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using NHibernateBootstrap.Core;
+using NHibernate.Cfg;
+using NHibernate.Tool.hbm2ddl;
 using NHibernateBootstrap.Core.Persistence;
 using StructureMap;
 
@@ -15,7 +16,7 @@ namespace NHibernateBootstrap.Web
     {
         private IUnitOfWork _unitOfWork;
 
-        public static void RegisterRoutes(RouteCollection routes)
+    	public static void RegisterRoutes(RouteCollection routes)
         {            
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
@@ -35,6 +36,8 @@ namespace NHibernateBootstrap.Web
         	ControllerBuilder.Current.SetControllerFactory(new StructureMapControllerFactory());
             RegisterRoutes(RouteTable.Routes);
             Bootstrapper.Bootstrap();
+			new SchemaExport(ObjectFactory.GetInstance<Configuration>()).Execute(false, true, false);
+			ObjectFactory.GetInstance<IDatabaseBuilder>().RebuildDatabase();            
         }
 
         protected void Application_BeginRequest()

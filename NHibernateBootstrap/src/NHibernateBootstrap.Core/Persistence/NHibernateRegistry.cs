@@ -18,7 +18,7 @@ namespace NHibernateBootstrap.Core.Persistence
                 .SetProperty(Environment.ReleaseConnections, "on_close")
                 .SetProperty(Environment.Dialect, typeof(SQLiteDialect).AssemblyQualifiedName)
                 .SetProperty(Environment.ConnectionDriver, typeof(SQLite20Driver).AssemblyQualifiedName)
-                .SetProperty(Environment.ConnectionString, "data source=nhibernate.sqlite;Version=3")
+                .SetProperty(Environment.ConnectionString, "data source=bootstrap.sqlite;Version=3")
                 .SetProperty(Environment.ProxyFactoryFactoryClass, typeof(ProxyFactoryFactory).AssemblyQualifiedName)
                 .AddAssembly(typeof(Blog).Assembly);
 
@@ -34,6 +34,9 @@ namespace NHibernateBootstrap.Core.Persistence
 
             ForRequestedType<IUnitOfWork>().CacheBy(InstanceScope.Hybrid)
                 .TheDefaultIsConcreteType<UnitOfWork>();
+
+        	ForRequestedType<IDatabaseBuilder>().TheDefaultIsConcreteType<DatabaseBuilder>();
+
         }
 
     }

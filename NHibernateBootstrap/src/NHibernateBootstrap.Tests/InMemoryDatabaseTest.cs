@@ -3,7 +3,6 @@ using System.Reflection;
 using NHibernate;
 using NHibernate.Cfg;
 using NHibernate.Tool.hbm2ddl;
-using NHibernateBootstrap.Core;
 using StructureMap;
 
 namespace NHibernateBootstrap.Tests

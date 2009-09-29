@@ -67,7 +67,9 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BuildDatabaseController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -85,7 +87,9 @@
   <ItemGroup>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Views\BuildDatabase\Index.aspx" />
     <Content Include="Views\Error\NotFound.aspx" />
+    <Content Include="Views\Product\Edit.aspx" />
     <Content Include="Views\Product\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
