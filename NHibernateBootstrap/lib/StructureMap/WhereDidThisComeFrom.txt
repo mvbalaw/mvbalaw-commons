@@ -1,0 +1,4 @@
+StructureMap version 2.5.4
+http://structuremap.sourceforge.net/Default.htm
+Checked out and built from the StructureMap Subversion repository (revision 263) on 9/29/2009
+svn co https://structuremap.svn.sourceforge.net/svnroot/structuremap structuremap 
