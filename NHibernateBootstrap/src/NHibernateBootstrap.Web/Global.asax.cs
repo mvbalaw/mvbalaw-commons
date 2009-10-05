@@ -14,8 +14,6 @@ namespace NHibernateBootstrap.Web
 
     public class MvcApplication : HttpApplication
     {
-        private IUnitOfWork _unitOfWork;
-
     	public static void RegisterRoutes(RouteCollection routes)
         {            
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -38,16 +36,6 @@ namespace NHibernateBootstrap.Web
             Bootstrapper.Bootstrap();
 			new SchemaExport(ObjectFactory.GetInstance<Configuration>()).Execute(false, true, false);
 			ObjectFactory.GetInstance<IDatabaseBuilder>().RebuildDatabase();            
-        }
-
-        protected void Application_BeginRequest()
-        {
-            _unitOfWork = ObjectFactory.GetInstance<IUnitOfWork>();   
-        }
-
-        protected void Application_EndRequest()
-        {
-            _unitOfWork.Dispose();        
         }
 
     }
