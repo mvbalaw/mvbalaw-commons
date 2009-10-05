@@ -1,0 +1,6 @@
+ASP.NET MVC 1.0
+http://asp.net/mvc
+Downloaded from the ASP.NET MVC site on 7/31/2009:
+http://www.microsoft.com/downloads/details.aspx?FamilyID=53289097-73ce-43bf-b6a6-35e00103cb4b&displaylang=en
+After installing the msi file, copied assemblies from the following folder
+C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 1.0\Assemblies
