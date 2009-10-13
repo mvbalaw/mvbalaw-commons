@@ -6,6 +6,7 @@ namespace NHibernateBootstrap.Core.Persistence
     public interface IUnitOfWork : IDisposable
     {
         ISession CurrentSession { get; }
-        void Commit();    
+        void Commit();
+    	void Rollback();
     }
 }

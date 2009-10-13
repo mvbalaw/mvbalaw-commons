@@ -37,7 +37,6 @@ namespace NHibernateBootstrap.Web.Controllers
 			product.Discontinued = productForm.Discontinued;
 
 			_unitOfWork.CurrentSession.SaveOrUpdate(product);
-			_unitOfWork.Commit();
 			return RedirectToAction("Index");
 		}
 
@@ -60,7 +59,6 @@ namespace NHibernateBootstrap.Web.Controllers
 		{
 			var product = _unitOfWork.CurrentSession.Get<Product>(id);
 			_unitOfWork.CurrentSession.Delete(product);
-			_unitOfWork.Commit();
 			return RedirectToAction("Index");
 		}
 

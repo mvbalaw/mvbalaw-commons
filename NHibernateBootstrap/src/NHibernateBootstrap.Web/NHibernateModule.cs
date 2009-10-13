@@ -5,30 +5,30 @@ using StructureMap;
 
 namespace NHibernateBootstrap.Web
 {
-    public class NHibernateModule : IHttpModule
-    {
-        private IUnitOfWork _unitOfWork;
+	public class NHibernateModule : IHttpModule, IDisposable
+	{
+		private IUnitOfWork _unitOfWork;
 
-        public void Init(HttpApplication context)
-        {
-            context.BeginRequest += ContextBeginRequest;
-            context.EndRequest += ContextEndRequest;
-        }
+		public void Init(HttpApplication context)
+		{
+			context.BeginRequest += ContextBeginRequest;
+			context.EndRequest += ContextEndRequest;
+		}
 
-        private void ContextBeginRequest(object sender, EventArgs e)
-        {
-            _unitOfWork = ObjectFactory.GetInstance<IUnitOfWork>();
+		private void ContextBeginRequest(object sender, EventArgs e)
+		{
+			_unitOfWork = ObjectFactory.GetInstance<IUnitOfWork>();
+		}
 
-        }
+		private void ContextEndRequest(object sender, EventArgs e)
+		{
+			Dispose();
+		}
 
-        private void ContextEndRequest(object sender, EventArgs e)
-        {
-            Dispose();
-        }
-
-        public void Dispose()
-        {
-            _unitOfWork.Dispose();
-        }
-    }
+		public void Dispose()
+		{
+			_unitOfWork.Commit();
+			_unitOfWork.Dispose();
+		}
+	}
 }
