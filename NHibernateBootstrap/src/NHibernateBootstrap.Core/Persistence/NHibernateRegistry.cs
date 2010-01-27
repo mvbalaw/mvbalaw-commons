@@ -5,7 +5,6 @@ using NHibernate.Dialect;
 using NHibernate.Driver;
 using NHibernateBootstrap.Core.Domain;
 using StructureMap.Configuration.DSL;
-using StructureMap.Pipeline;
 using Environment=NHibernate.Cfg.Environment;
 
 namespace NHibernateBootstrap.Core.Persistence
