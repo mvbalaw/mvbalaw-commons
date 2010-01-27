@@ -27,8 +27,9 @@ namespace NHibernateBootstrap.Web
 
 		public void Dispose()
 		{
-			_unitOfWork.Commit();
-			_unitOfWork.Dispose();
+		    if (_unitOfWork == null) return;
+		    _unitOfWork.Commit();
+		    _unitOfWork.Dispose();
 		}
 	}
 }

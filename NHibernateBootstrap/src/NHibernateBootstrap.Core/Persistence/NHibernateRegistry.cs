@@ -1,3 +1,4 @@
+using System;
 using NHibernate;
 using NHibernate.ByteCode.Castle;
 using NHibernate.Cfg;
@@ -18,7 +19,7 @@ namespace NHibernateBootstrap.Core.Persistence
                 .SetProperty(Environment.ReleaseConnections, "on_close")
                 .SetProperty(Environment.Dialect, typeof(SQLiteDialect).AssemblyQualifiedName)
                 .SetProperty(Environment.ConnectionDriver, typeof(SQLite20Driver).AssemblyQualifiedName)
-                .SetProperty(Environment.ConnectionString, "data source=bootstrap.sqlite;Version=3")
+                .SetProperty(Environment.ConnectionString, "data source=|DataDirectory|bootstrap.sqlite;Version=3")
                 .SetProperty(Environment.ProxyFactoryFactoryClass, typeof(ProxyFactoryFactory).AssemblyQualifiedName)
                 .AddAssembly(typeof(Blog).Assembly);
 
