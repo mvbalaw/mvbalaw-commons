@@ -1,12 +1,11 @@
-using System;
 using NHibernate;
 using NHibernate.ByteCode.Castle;
 using NHibernate.Cfg;
 using NHibernate.Dialect;
 using NHibernate.Driver;
 using NHibernateBootstrap.Core.Domain;
-using StructureMap.Attributes;
 using StructureMap.Configuration.DSL;
+using StructureMap.Pipeline;
 using Environment=NHibernate.Cfg.Environment;
 
 namespace NHibernateBootstrap.Core.Persistence
@@ -25,18 +24,18 @@ namespace NHibernateBootstrap.Core.Persistence
 
             var sessionFactory = cfg.BuildSessionFactory();
 
-            ForRequestedType<Configuration>().AsSingletons().TheDefault.IsThis(cfg);
+            For<Configuration>().Singleton().Use(cfg);
 
-            ForRequestedType<ISessionFactory>().AsSingletons()
-                .TheDefault.IsThis(sessionFactory);
+            For<ISessionFactory>().Singleton().Use(sessionFactory);
 
-            ForRequestedType<ISession>().CacheBy(InstanceScope.Hybrid)
-                .TheDefault.Is.ConstructedBy(ctx => ctx.GetInstance<ISessionFactory>().OpenSession());
+            
+            For<ISession>().HybridHttpOrThreadLocalScoped()
+                .Use(ctx => ctx.GetInstance<ISessionFactory>().OpenSession());
 
-            ForRequestedType<IUnitOfWork>().CacheBy(InstanceScope.Hybrid)
-                .TheDefaultIsConcreteType<UnitOfWork>();
+            For<IUnitOfWork>().HybridHttpOrThreadLocalScoped()
+                .Use<UnitOfWork>();
 
-        	ForRequestedType<IDatabaseBuilder>().TheDefaultIsConcreteType<DatabaseBuilder>();
+        	For<IDatabaseBuilder>().Use<DatabaseBuilder>();
 
         }
 
