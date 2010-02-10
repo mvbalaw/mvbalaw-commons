@@ -11,7 +11,7 @@ require 'zip/zipfilesystem'
 RESULTS_DIR = "results"
 BUILD_NUMBER = "0.1.0."
 PRODUCT = "NHibernateBootstrap"
-COPYRIGHT = 'Copyright 2009 McCreary, Veselka, Bragg & Allen, P.C. All rights reserved. http://code.google.com/p/mvbalaw-commons/';
+COPYRIGHT = '2010 McCreary, Veselka, Bragg & Allen, P.C. All rights reserved. http://code.google.com/p/mvbalaw-commons/';
 COMMON_ASSEMBLY_INFO = 'src/CommonAssemblyInfo.cs';
 CLR_VERSION = "v3.5"
 
@@ -59,7 +59,7 @@ desc "Compiles the app"
 task :compile => [:clean, :version] do
   MSBuildRunner.compile :compilemode => COMPILE_TARGET, :solutionfile => 'src/NHibernateBootstrap.sln', :clrversion => CLR_VERSION
     
-  outDir = "src/NHibernateBootstrap.Core/bin/#{COMPILE_TARGET}"
+  outDir = "src/NHibernateBootstrap.Tests/bin/#{COMPILE_TARGET}"
     
   Dir.glob(File.join(outDir, "*.{dll,pdb}")){|file| 		
 	copy(file, props[:archive]) if File.file?(file)
