@@ -1,0 +1,8 @@
+SQLite version 3.1.18
+http://www.sqlite.org/
+Downloaded from the SQLite web site on 9/22/2009
+http://www.sqlite.org/download.html
+Selected the sqlite-3_6_18.zip link under Precompiled Binaries for Windows.
+
+SQLite is public domain software.  However, there is a copyright for it.
+Here is the license information: http://www.sqlite.org/copyright.html

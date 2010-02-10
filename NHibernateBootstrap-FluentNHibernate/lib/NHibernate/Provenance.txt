@@ -1,0 +1,4 @@
+NHibernate version 2.1.2.GA
+http://nhforge.org
+Downloaded from the StructureMap SourceForge site on 1/29/2010
+http://sourceforge.net/projects/nhibernate/files/NHibernate/2.1.2GA/

@@ -1,0 +1,4 @@
+StructureMap version 2.5.4
+http://structuremap.sourceforge.net/Default.htm
+Downloaded from the StructureMap SourceForge web site on 01/27/2010
+http://sourceforge.net/projects/structuremap/files/StructureMap2.5.4.zip/download
