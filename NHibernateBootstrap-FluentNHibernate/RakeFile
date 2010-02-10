@@ -59,7 +59,7 @@ desc "Compiles the app"
 task :compile => [:clean, :version] do
   MSBuildRunner.compile :compilemode => COMPILE_TARGET, :solutionfile => 'src/NHibernateBootstrap.sln', :clrversion => CLR_VERSION
     
-  outDir = "src/NHibernateBootstrap.Core/bin/#{COMPILE_TARGET}"
+  outDir = "src/NHibernateBootstrap.Tests/bin/#{COMPILE_TARGET}"
     
   Dir.glob(File.join(outDir, "*.{dll,pdb}")){|file| 		
 	copy(file, props[:archive]) if File.file?(file)
