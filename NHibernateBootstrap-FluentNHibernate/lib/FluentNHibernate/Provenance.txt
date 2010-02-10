@@ -1,4 +1,4 @@
-FluentNHibernate 1.0.0.593 (1.0 RTM)
+FluentNHibernate 1.0.0.623 (Build from CI server that includes NHibernate 2.1.2GA
 http://fluentnhibernate.org/
-Downloaded from FluentNHibernate Downloads page on 1/28/2010
-http://fluentnhibernate.org/downloads/releases/fluentnhibernate-1.0RTM.zip
+Downloaded from FluentNHibernate CI Server (teamcity.codebetter.com) on 2/10/2010
+http://teamcity.codebetter.com/repository/download/bt9/9357:id/fluentnhibernate-docs-1.0.0.623.zip
