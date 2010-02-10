@@ -1,0 +1,4 @@
+FluentNHibernate 1.0.0.593 (1.0 RTM)
+http://fluentnhibernate.org/
+Downloaded from FluentNHibernate Downloads page on 1/28/2010
+http://fluentnhibernate.org/downloads/releases/fluentnhibernate-1.0RTM.zip
